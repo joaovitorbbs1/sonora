@@ -41,6 +41,10 @@ public class UsuarioModel {
     @Column(name = "PAIS", nullable = false)
     private String pais;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "ROLE", nullable = false, length = 20)
+    private Role role = Role.USUARIO;
+
     @ElementCollection
     @CollectionTable(name = "usuario_telefone", joinColumns = @JoinColumn(name = "usuario_id"))
     @Column(name = "TELEFONE", nullable = false)
@@ -59,6 +63,7 @@ public class UsuarioModel {
         this.estado = estado;
         this.pais = pais;
         this.telefones = telefones;
+        this.role = Role.USUARIO;
     }
 
     public Long getId() {
@@ -140,6 +145,10 @@ public class UsuarioModel {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+    public Role getRole() { return role; }
+
+    public void setRole(Role role) { this.role = role; }
 
     public Set<String> getTelefones() {
         return telefones;

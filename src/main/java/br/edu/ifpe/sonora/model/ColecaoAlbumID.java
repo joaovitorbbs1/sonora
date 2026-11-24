@@ -23,6 +23,14 @@ public class ColecaoAlbumID implements Serializable {
         this.colecaoID = colecaoID;
     }
 
+    public Long getAlbumID() {
+        return albumID;
+    }
+
+    public Long getColecaoID() {
+        return colecaoID;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

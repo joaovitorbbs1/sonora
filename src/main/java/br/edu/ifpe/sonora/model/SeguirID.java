@@ -23,6 +23,14 @@ public class SeguirID implements Serializable {
         this.seguidoID = seguidoID;
     }
 
+    public Long getSeguidorID() {
+        return seguidorID;
+    }
+
+    public Long getSeguidoID() {
+        return seguidoID;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
