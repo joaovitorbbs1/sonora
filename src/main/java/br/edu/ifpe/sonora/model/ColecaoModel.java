@@ -31,7 +31,7 @@ public class ColecaoModel {
 
     public ColecaoModel(){}
 
-    public ColecaoModel(Long id, String nome, String descricao,
+    public ColecaoModel(String nome, String descricao,
                         Visibilidade visibilidade, LocalDate dataCriacao, UsuarioModel usuario) {
         this.id = id;
         this.nome = nome;

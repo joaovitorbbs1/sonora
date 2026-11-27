@@ -24,6 +24,6 @@ public interface ColecaoRepository extends JpaRepository<ColecaoModel, Long> {
     List<ColecaoModel> findByDataCriacaoBetween(LocalDate dataInicio, LocalDate dataFim);
 
 
-    @Query("SELECT c FROM ColecaoModel c LEFT JOIN c.itens i GROUP BY c ORDER BY COUNT(i) DESC")
+    @Query("SELECT ca.colecao FROM ColecaoAlbumModel ca GROUP BY ca.colecao ORDER BY COUNT(ca) DESC")
     List<ColecaoModel> findTopColecoesComMaisAlbuns();
 }
